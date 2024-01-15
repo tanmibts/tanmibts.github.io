@@ -36,6 +36,12 @@
   font-style: italic;
 }
 
+@media screen and (max-width: 600px) {
+  .App-text {
+    font-size: large;
+  }
+}
+
 .App-dots {
   color: #000000 !important;
 }

@@ -1,7 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
-import { useEffect } from "react"
-import BusinessCard from './BusinessCard/BusinessCard';
+import { useEffect } from "react";
+import { BusinessCard } from './BusinessCard/BusinessCard';
+import { Projects } from './Projects/Projects';
+import { Dots } from './Misc/Dots';
 
 function App() {
 
@@ -17,7 +19,11 @@ function App() {
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300i,400&amp;display=swap" rel="stylesheet"></link>
       </header>
       <body>
-        <BusinessCard />
+        <div className="App-text">
+          <BusinessCard />
+          <Dots />
+          <Projects />
+        </div>
       </body >
     </div >
   );
