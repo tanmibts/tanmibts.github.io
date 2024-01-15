@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -23,11 +23,33 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+*/
 .App-link {
-  color: #61dafb;
+  color: #fff795 !important;
+  background-color: #bad7fb !important;
 }
 
+.App-text {
+  color: #b1a6fd !important;
+  font-family: "Roboto Mono", monospace;
+  font-size: xx-large;
+  font-style: italic;
+}
+
+.App-dots {
+  color: #000000 !important;
+}
+
+::selection {
+  background: #cfffcc;
+}
+
+.App-div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +57,6 @@
   to {
     transform: rotate(360deg);
   }
-}
+} 
+
+*/
