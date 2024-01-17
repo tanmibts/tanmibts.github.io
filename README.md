@@ -117,4 +117,31 @@ git push
 yarn deploy
 
 # now the site is up and running!
+
+# install typescript
+yarn add typescript @types/node @types/react @types/react-dom @types/jest
+
+# other typescript setup stuff
+# convert .js --> .tsx
+touch repo/tsconfig.json
+
+# add this 
+{
+    "compilerOptions": {
+        "jsx": "react-jsx"
+    },
+    "include": [
+        "src",
+        "src/declaration.d.ts",
+    ]
+}
+
+touch repo/src/declaration.d.ts
+
+# add this
+declare module "*.png";
+declare module "*.svg";
+declare module "*.jpeg";
+declare module "*.jpg";
+
 ```

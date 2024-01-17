@@ -1,5 +1,5 @@
 import { Wood } from "./Wood/Wood"
-import { ZineSlappySlant } from "./ZineSlappySlant"
+// import { ZineSlappySlant } from "./ZineSlappySlant"
 
 export function Projects() {
     return <div>
