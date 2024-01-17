@@ -68,3 +68,53 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### My setup notes.
+
+```
+# install yarn
+yarn install
+
+# installed nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+# add to bash
+touch ~/.bash_profile
+source ~/.bashrc
+
+# install latest node
+nvm install 21
+nvm use 21
+
+# create react app inside
+yarn create react-app . typescript
+
+#woohoo! (creates /public dir)
+yarn start
+
+# create production build (create /build dir)
+yarn build
+
+# add homepage field to package.json 
+"homepage": "https://myusername.github.io",
+
+# install gh-pages
+yarn add gh-pages
+
+# add scripts to package.json, DON'T do the master thing
+"scripts": {
++   "predeploy": "npm run build",
++   "deploy": "gh-pages -d build",
+
+# PUSH THIS BRANCH
+git push
+
+# change the deploy branch to gh-pages
+# Settings > Pages > Build and Deployment > change branch to gh-pages, folder to /root
+
+# deploy the site from this branch
+yarn deploy
+
+# now the site is up and running!
+```

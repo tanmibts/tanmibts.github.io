@@ -1,0 +1,23 @@
+.center {
+    margin: auto;
+    width: 50%;
+    /* border: 3px solid green; */
+    /* padding: 10px; */
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+}
+
+.chair-pic {
+    margin-right: 50px;
+}
+
+.margin-xy {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
