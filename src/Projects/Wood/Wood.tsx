@@ -7,8 +7,8 @@ export const Wood = () => {
         <div>last year, i made a chair. the design is based on the pierre jeanneret chandigarh chair, with my modifications.</div>
         <div className="margin-xy">
             <div className="container">
-                <div className="chair-pic">
-                    <img src={chair} alt="chair" width={350} />
+                <div className="chair--container">
+                    <img className="chair--pic" src={chair} alt="chair" />
                 </div>
                 <div className="chair-description">
                     <div>chair (cherry frame, textile is old clothing scraps I collected from friends and wove together) </div>
@@ -18,7 +18,7 @@ export const Wood = () => {
         <div className="margin-xy">
             <div className="container">
                 <div>meanwhile, with the wood scraps, i whittled chopsticks + gave them out to friends. </div>
-                <div><img src={chopsticksJaiveer} alt="chopsticks 1" width={250} /></div>
+                <div ><img className="chopsticks--pic" src={chopsticksJaiveer} alt="chopsticks 1" /></div>
             </div>
         </div>
     </div>

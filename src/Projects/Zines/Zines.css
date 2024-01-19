@@ -32,6 +32,16 @@
     margin: 5px;
 }
 
+@media (max-width: 500px) {
+    .card--content {
+        margin: 1px;
+    }
+
+    .card--image {
+        width: 400px;
+    }
+}
+
 .card::-webkit-scrollbar {
     display: none;
 }

@@ -13,8 +13,22 @@
     /* flex-wrap: wrap; */
 }
 
-.chair-pic {
+.chair--container {
     margin-right: 50px;
+}
+
+.chair--pic {
+    width: 350px;
+}
+
+@media (max-width: 500px) {
+    .chair--pic {
+        width: 200px;
+    }
+}
+
+.chopsticks--pic {
+    width: 250px;
 }
 
 .margin-xy {

@@ -24,7 +24,7 @@ const Zine = ({ imagePaths }: { imagePaths: Array<string> }) => {
         <div className="background">
             <section className="card">
                 {imagePaths.map((path, index) => (
-                    <div className="card--content"><img key={index} src={require(`${path}`)} alt={`image-${index}`} /></div>
+                    <div className="card--content"><img className="card--image" key={index} src={require(`${path}`)} alt={`image-${index}`} /></div>
                 ))}
             </section>
         </div>
