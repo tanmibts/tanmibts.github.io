@@ -3,9 +3,9 @@ import './App.css';
 import { useEffect } from "react";
 import { BusinessCard } from './BusinessCard/BusinessCard';
 import { Projects } from './Projects/Projects';
-import { Dots } from './Misc/Dots';
+import { Dots } from './Misc/Misc';
 
-function App() {
+const App = () => {
 
   useEffect(() => {
     document.title = "victoria"

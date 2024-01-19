@@ -1,8 +1,8 @@
-import { Dots } from "../../Misc/Dots";
+import { Buffer } from "../../Misc/Misc";
 
 export const BookRecs = () => {
     return <>
-
+        {/* Consider for the future: I like how this displays the books: https://degrowthcalifornia.org/publications/ */}
         <div className="margin-xy">
             <div>
                 here are some books that have shaped how I thinkfeel:
@@ -14,7 +14,7 @@ export const BookRecs = () => {
             <div>- <b>grace lee boggs</b> the next american revolution: sustainable activism for the twenty-first century</div>
             <div>- <b>david r. montgomery</b> dirt: the erosion of civilizations</div>
         </div >
-        <Dots />
+        <Buffer />
         <div className="margin-xy">
             <div>and here are some books that have shaped how I feelthink:</div>
             <div>- <b>john berger</b> and our faces, my heart, brief as photos</div>

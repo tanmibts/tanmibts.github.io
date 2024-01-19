@@ -2,7 +2,7 @@ import "./Wood.css";
 import chair from "./assets/chair.jpg"
 import chopsticksJaiveer from "./assets/chopsticks_jaiveer.png"
 
-export function Wood() {
+export const Wood = () => {
     return <div>
         <div>last year, i made a chair. the design is based on the pierre jeanneret chandigarh chair, with my modifications.</div>
         <div className="margin-xy">
