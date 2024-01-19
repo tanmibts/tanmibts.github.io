@@ -21,12 +21,6 @@
     width: 350px;
 }
 
-@media (max-width: 500px) {
-    .chair--pic {
-        width: 200px;
-    }
-}
-
 .chopsticks--pic {
     width: 250px;
 }
@@ -34,4 +28,15 @@
 .margin-xy {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+
+@media (max-width: 500px) {
+    .chair--pic {
+        width: 100px;
+    }
+
+    .chopsticks--pic {
+        width: 100px;
+    }
 }
