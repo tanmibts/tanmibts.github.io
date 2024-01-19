@@ -1,12 +1,13 @@
 import { Wood } from "./Wood/Wood"
-// import { ZineSlappySlant } from "./ZineSlappySlant"
+import { Zines } from "./Zines/Zines"
 import { BookRecs } from "./BookRecs/BookRecs"
-import { Dots } from "../Misc/Dots"
+import { Dots } from "../Misc/Misc"
 
-export function Projects() {
+export const Projects = () => {
     return <div>
         <Wood />
-        {/* <ZineSlappySlant /> */}
+        <Dots />
+        <Zines />
         <Dots />
         <BookRecs />
     </div>

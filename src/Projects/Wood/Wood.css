@@ -13,11 +13,30 @@
     /* flex-wrap: wrap; */
 }
 
-.chair-pic {
+.chair--container {
     margin-right: 50px;
+}
+
+.chair--pic {
+    width: 350px;
+}
+
+.chopsticks--pic {
+    width: 250px;
 }
 
 .margin-xy {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+
+@media (max-width: 500px) {
+    .chair--pic {
+        width: 100px;
+    }
+
+    .chopsticks--pic {
+        width: 100px;
+    }
 }

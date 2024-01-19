@@ -1,7 +1,7 @@
 import '../App.css';
-import { Dots } from '../Misc/Dots';
+import { Dots } from '../Misc/Misc';
 
-export function BusinessCard() {
+export const BusinessCard = () => {
   return (
     <div>
       <div className="App-div">
