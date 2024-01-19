@@ -9,12 +9,12 @@ export const Zines = () => {
     const imagePathsSlappy = range(1, 19).map(num => `./assets/slappy/${num}.png`)
     const imagePathsSlant = range(1, 17).map(num => `./assets/slant/${num}.png`)
     return <>
-        <div>i made a poetry zine, published as a diptych:</div>
+        <div>i made a poetry zine, published as a diptych.</div>
         <Buffer />
-        <div>slappy</div>
+        <div>{`slappy --> `}</div>
         <Zine imagePaths={imagePathsSlappy} />
         <Buffer />
-        <div>and slant</div>
+        <div>{`and slant --> `}</div>
         <Zine imagePaths={imagePathsSlant} />
     </>
 }
