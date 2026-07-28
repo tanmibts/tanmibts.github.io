@@ -75,10 +75,14 @@ When you are happy with your local changes on `add-img-blob`:
    git push origin add-img-blob
    ```
 
+TODO victoria maybe need to update deploy branch?
+
 2. **Deploy to GitHub Pages (`gh-pages` branch):**
    ```bash
    yarn deploy
    # or: npm run deploy
+   yarn global add serve
+   serve -s build
    ```
    *This automatically builds your React app and pushes the compiled production output to the `gh-pages` branch, updating https://tanmibts.github.io/.*
 
@@ -104,19 +108,30 @@ The main page features draggable folder icons. To set a new default initial layo
 1. **Arrange the icons** on `http://localhost:3000/#/` by dragging them to your desired desktop layout.
 2. **Extract current coordinates** by opening Developer Tools (`Cmd` + `Option` + `I` on Mac) > **Console** tab and running:
    ```javascript
-   Array.from(document.querySelectorAll('.draggable-folder')).map(el => ({
-     folder: el.innerText.replace('::', '').trim(),
-     transform: el.style.transform
-   }))
+   Array.from(document.querySelectorAll('.draggable-folder')).map(el => {
+     const parentWidth = el.parentElement.clientWidth;
+     const match = el.style.transform.match(/translate3d\(([^px]+)px,\s*([^px]+)px/);
+     const xPx = match ? parseFloat(match[1]) : 0;
+     const yPx = match ? parseFloat(match[2]) : 0;
+     return {
+       folder: el.innerText.replace('::', '').trim(),
+       xPct: Math.round((xPx / parentWidth) * 100),
+       y: Math.round(yPx)
+     };
+   })
    ```
-3. **Update [`src/Projects/Projects.tsx`](file:///Users/vtan/code/tanmibts.github.io/src/Projects/Projects.tsx)**: Update the `initialPos={{ x, y }}` values inside `<Projects />` with the new coordinates.
+3. **Update [`src/Projects/Projects.tsx`](file:///Users/vtan/code/tanmibts.github.io/src/Projects/Projects.tsx)**: Update the `initialPosPct={{ xPct, y }}` values inside `<Projects />` with the extracted `{ xPct, y }` coordinates.
 
 ---
 
 # TODO
-
-- 2026-07-27 map over all images in photoblog
 - [x] 2026-07-27 main page: page folders can be dragged around the page like desktop icons. default position should be a nice messy smattering
+- 2026-07-27 main page: icon should be the latest photo
+- [x] 2026-07-27 map over all images in photoblog
 - 2026-07-27 change the color scheme
-- 2026-07-27 add MELT project folder
-- 2026-07-27 add book photos to bookshelf
+- 2026-07-27 (idea from byron) style the aesthetic after my personal style. use pictures of my clothing textures
+- 2026-07-27 project folder: new: ootd
+- 2026-07-27 project folder: new: MELT
+- 2026-07-27 project folder: update: bookshelf: add book photos
+- 2026-07-27 or style the main page to look like a messy desk. all the little things are stored in shells, like on my desk
+- 2026-07-28 change the icon to not be an egg

@@ -119,16 +119,16 @@ const DraggableFolder = ({ children, initialPosPct }: DraggableFolderProps) => {
 export const Projects = () => {
     return (
         <div className="desktop-workspace">
-            <DraggableFolder initialPosPct={{ xPct: 65, y: -160 }}>
+            <DraggableFolder initialPosPct={{ xPct: 63, y: -201 }}>
                 <WoodFolder />
             </DraggableFolder>
-            <DraggableFolder initialPosPct={{ xPct: 50, y: -70 }}>
+            <DraggableFolder initialPosPct={{ xPct: 51, y: -70 }}>
                 <ZinesFolder />
             </DraggableFolder>
-            <DraggableFolder initialPosPct={{ xPct: 40, y: -30 }}>
+            <DraggableFolder initialPosPct={{ xPct: 44, y: -27 }}>
                 <BookRecsFolder />
             </DraggableFolder>
-            <DraggableFolder initialPosPct={{ xPct: 78, y: 280 }}>
+            <DraggableFolder initialPosPct={{ xPct: 80, y: 280 }}>
                 <PhotoBlogFolder />
             </DraggableFolder>
         </div>

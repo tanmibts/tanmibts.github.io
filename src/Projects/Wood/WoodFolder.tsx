@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Wood.css";
-import chair from "./assets/chair.jpg";
+import chair from "./assets/chair_popout.png";
 
 export const WoodFolder = () => {
     return (
