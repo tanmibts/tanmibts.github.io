@@ -1,17 +1,3 @@
-/* body {
-    width: 100%;
-    height: 100%;
-} */
-
-
-/* body {
-    background-color: #8e44ad;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .background {
     padding: 3px;
     background-color: black;
@@ -19,16 +5,11 @@
 
 .card {
     display: flex;
-    /* background-color: #fff; */
-    /* min-width: 100%; */
-    /* min-height: 200px; */
     overflow-x: auto;
     align-items: center;
 }
 
 .card--content {
-    /* background-color: #e74c3c; */
-    /* min-width: 100%; */
     margin: 5px;
 }
 
@@ -44,4 +25,24 @@
 
 .card::-webkit-scrollbar {
     display: none;
+}
+
+/* Zines Desktop Folder Icon */
+.zines-folder-icon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.zines-folder-img {
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 500px) {
+    .zines-folder-img {
+        width: 90px;
+    }
 }

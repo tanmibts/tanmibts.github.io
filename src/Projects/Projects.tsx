@@ -1,14 +1,17 @@
-import { Wood } from "./Wood/Wood"
-import { Zines } from "./Zines/Zines"
-import { BookRecs } from "./BookRecs/BookRecs"
-import { Dots } from "../Misc/Misc"
+import { WoodFolder } from "./Wood/WoodFolder";
+import { ZinesFolder } from "./Zines/ZinesFolder";
+import { BookRecsFolder } from "./BookRecs/BookRecsFolder";
+import { PhotoBlogFolder } from "./PhotoBlog/PhotoBlogFolder";
+import { Dots } from "../Misc/Misc";
 
 export const Projects = () => {
     return <div>
-        <Wood />
+        <WoodFolder />
         <Dots />
-        <Zines />
+        <ZinesFolder />
         <Dots />
-        <BookRecs />
+        <BookRecsFolder />
+        <Dots />
+        <PhotoBlogFolder />
     </div>
 }
