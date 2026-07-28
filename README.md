@@ -94,3 +94,13 @@ python3 -m http.server 8000
 ```
 Open **[http://localhost:8000](http://localhost:8000)** in your browser.
 *(Remember to switch back to `git checkout add-img-blob` when editing code again!)*
+
+---
+
+# TODO
+
+- 2026-07-27 map over all images in photoblog
+- 2026-07-27 main page: page folders can be dragged around the page like desktop icons. default position should be a nice messy smattering
+- 2026-07-27 change the color scheme
+- 2026-07-27 add MELT project folder
+- 2026-07-27 add book photos to bookshelf
