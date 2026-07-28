@@ -97,10 +97,26 @@ Open **[http://localhost:8000](http://localhost:8000)** in your browser.
 
 ---
 
+## 🖥️ Customizing & Saving Desktop Icon Initial Positions
+
+The main page features draggable folder icons. To set a new default initial layout for the folders:
+
+1. **Arrange the icons** on `http://localhost:3000/#/` by dragging them to your desired desktop layout.
+2. **Extract current coordinates** by opening Developer Tools (`Cmd` + `Option` + `I` on Mac) > **Console** tab and running:
+   ```javascript
+   Array.from(document.querySelectorAll('.draggable-folder')).map(el => ({
+     folder: el.innerText.replace('::', '').trim(),
+     transform: el.style.transform
+   }))
+   ```
+3. **Update [`src/Projects/Projects.tsx`](file:///Users/vtan/code/tanmibts.github.io/src/Projects/Projects.tsx)**: Update the `initialPos={{ x, y }}` values inside `<Projects />` with the new coordinates.
+
+---
+
 # TODO
 
 - 2026-07-27 map over all images in photoblog
-- 2026-07-27 main page: page folders can be dragged around the page like desktop icons. default position should be a nice messy smattering
+- [x] 2026-07-27 main page: page folders can be dragged around the page like desktop icons. default position should be a nice messy smattering
 - 2026-07-27 change the color scheme
 - 2026-07-27 add MELT project folder
 - 2026-07-27 add book photos to bookshelf

@@ -43,9 +43,7 @@
 }
 
 .folder-item:hover {
-  border-color: #cfffcc;
-  outline: 2px solid #cfffcc;
-  background-color: rgba(207, 255, 204, 0.1);
+  /* Hover styling handled by .draggable-folder:hover */
 }
 
 .folder-item-img {

@@ -1,0 +1,80 @@
+.desktop-workspace {
+    position: relative;
+    min-height: 480px;
+    width: 100%;
+    margin: 20px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.draggable-folder,
+.draggable-folder * {
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.draggable-folder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: grab;
+    touch-action: none;
+    z-index: 1;
+    border: 2px dashed transparent;
+    border-radius: 8px;
+    padding: 6px;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease, transform 0.1s ease-out;
+}
+
+/* Hover state: Lift, shadow & dashed selection outline */
+.draggable-folder:hover {
+    z-index: 10;
+    border-color: #cfffcc;
+    box-shadow: 4px 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.draggable-folder:hover .drag-grip-badge {
+    opacity: 1;
+    background-color: #cfffcc;
+    color: #000;
+}
+
+/* Dragging state: Active tilt, deep shadow & highlight */
+.draggable-folder.dragging {
+    cursor: grabbing;
+    z-index: 100;
+    border-color: #bad7fb;
+    box-shadow: 8px 14px 28px rgba(0, 0, 0, 0.22);
+    transition: none;
+}
+
+.draggable-folder.dragging .drag-grip-badge {
+    opacity: 1;
+    background-color: #bad7fb;
+    color: #000;
+}
+
+/* Drag Grip Badge */
+.drag-grip-badge {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 3px 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #666;
+    border-radius: 4px;
+    opacity: 0.5;
+    transition: opacity 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+    pointer-events: none;
+    font-family: "Roboto Mono", monospace;
+}
+
+@media (max-width: 600px) {
+    .desktop-workspace {
+        min-height: 520px;
+    }
+}
