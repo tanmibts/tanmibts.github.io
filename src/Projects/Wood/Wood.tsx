@@ -1,5 +1,5 @@
 import "./Wood.css";
-import chair from "./assets/chair.jpg";
+import chair from "./assets/chair_popout.png";
 import chopsticksJaiveer from "./assets/chopsticks_jaiveer.png";
 
 export const Wood = () => {
