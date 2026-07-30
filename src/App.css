@@ -1,10 +1,55 @@
+/* Default State: Steel Text on Red Background */
 .App-link {
-  color: #fff795 !important;
-  background-color: #bad7fb !important;
+  /* 1. The Metallic Gradient (Steel) */
+  background: linear-gradient(to bottom,
+      #888888 0%,
+      /* Dark steel edge */
+      #eeeeee 45%,
+      /* Light reflection */
+      #ffffff 50%,
+      /* Peak highlight */
+      #cccccc 51%,
+      /* Sharp drop */
+      #888888 100%
+      /* Dark steel edge */
+    );
+
+  /* 2. Clip gradient to text shape */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. Make text transparent to show gradient */
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  /* 4. The Red Background Highlight */
+  background-color: #ff3a3a !important;
+
+  /* Ensure it behaves like an inline highlight */
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Selected State: Yellow Text on Red Background */
+.App-link::selection {
+  /* Restore the original yellow text color */
+  color: #ebf4b7;
+  -webkit-text-fill-color: #ebf4b7;
+  /* Crucial: overrides the transparent fill */
+
+  /* Keep the background red (or darken it slightly for better contrast) */
+  background: #ff3a3a;
+}
+
+/* Optional: For Firefox which sometimes handles selection differently */
+.App-link::-moz-selection {
+  color: #ebf4b7;
+  background: #ff3a3a;
 }
 
 .App-text {
-  color: #b1a6fd !important;
+  color: #2e49ff !important;
   font-family: "Roboto Mono", monospace;
   font-size: xx-large;
   font-style: italic;
@@ -17,11 +62,26 @@
 }
 
 .App-dots {
-  color: #000000 !important;
+  color: #ebf4b7 !important;
 }
 
 ::selection {
-  background: #cfffcc;
+  background: #ff3a3a;
+}
+
+
+
+
+body {
+  background-image: url('assets/concrete_floor_8.jpeg');
+  background-repeat: repeat;
+  /* Tiles the image */
+  background-attachment: fixed;
+  /* Keeps it stationary while scrolling */
+  background-position: center;
+  /* Optional: Centers the first tile */
+  margin: 0;
+  /* Removes default body margin */
 }
 
 .App-div {
