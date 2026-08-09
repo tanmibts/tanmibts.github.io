@@ -1,18 +1,7 @@
 /* Default State: Steel Text on Red Background */
 .App-link {
   /* 1. The Metallic Gradient (Steel) */
-  background: linear-gradient(to bottom,
-      #888888 0%,
-      /* Dark steel edge */
-      #eeeeee 45%,
-      /* Light reflection */
-      #ffffff 50%,
-      /* Peak highlight */
-      #cccccc 51%,
-      /* Sharp drop */
-      #888888 100%
-      /* Dark steel edge */
-    );
+  background: #ebf4b7;
 
   /* 2. Clip gradient to text shape */
   -webkit-background-clip: text;
@@ -23,7 +12,7 @@
   -webkit-text-fill-color: transparent;
 
   /* 4. The Red Background Highlight */
-  background-color: #ff3a3a !important;
+  background-color: #ebf4b7 !important;
 
   /* Ensure it behaves like an inline highlight */
   display: inline-block;
@@ -73,7 +62,7 @@
 
 
 body {
-  background-image: url('assets/concrete_floor_8.jpeg');
+  background-image: url('assets/concrete_floor_light.jpeg');
   background-repeat: repeat;
   /* Tiles the image */
   background-attachment: fixed;

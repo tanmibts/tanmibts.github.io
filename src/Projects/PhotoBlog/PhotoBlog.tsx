@@ -33,10 +33,17 @@ interface PhotoMetadata {
 const photoMetadataMap: Record<string, PhotoMetadata> = {
     "a_2026-06-07_19_29.jpg": {
         title: "Joshua Tree #1",
+        description: "this is a long descrition. i love joshua tree. I want to see what this looks like when it's long.I want to see what this looks like when it's long.I want to see what this looks like when it's long.I want to see what this looks like when it's long.I want to see what this looks like when it's long.I want to see what this looks like when it's long.I want to see what this looks like when it's long."
     },
     "a_2026-06-07_20_16.jpg": {
         title: "Joshua Tree #2",
     },
+    "a_2026-07-23": {
+        title: "Sublime Study"
+    },
+    "a_2026-07-19": {
+        title: "World Cup"
+    }
 };
 
 // Dynamically require all image assets from assets folder and subdirectories
