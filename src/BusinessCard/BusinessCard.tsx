@@ -5,8 +5,11 @@ export const BusinessCard = () => {
   return (
     <div>
       <div className="App-div">
-        my name is victoria tan
+        my name is <span className="emphasis">victoria tan</span>
       </div>
+
+
+
       <div className="App-div">
         I am a software engineer at <a className="App-link" href="https://www.tapestryenergy.com/" >tapestry</a>
       </div>

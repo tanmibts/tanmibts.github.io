@@ -56,9 +56,9 @@
 }
 
 .chair-folder:hover {
-    border-color: #cfffcc;
-    outline: 2px solid #cfffcc;
-    background-color: rgba(207, 255, 204, 0.1);
+    border-color: var(--color-yellow);
+    outline: 2px solid var(--color-yellow);
+    background-color: rgba(235, 244, 183, 0.1);
 }
 
 .chair-folder-img {
@@ -70,10 +70,11 @@
 
 .chair-folder-label {
     margin-top: 8px;
-    color: #2e49ff;
+    color: var(--color-blue);
     font-family: "Roboto Mono", monospace;
     font-size: large;
 }
+
 
 @media (max-width: 500px) {
     .chair-folder-img {

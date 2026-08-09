@@ -73,10 +73,10 @@
 }
 
 .photoblog-wrapper {
-    width: 50%;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 90vw;
 }
 
 .photoblog-date {
@@ -86,13 +86,173 @@
 }
 
 .photoblog-img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 75vh;
+    width: auto;
     height: auto;
     object-fit: contain;
+    display: block;
 }
 
-@media (max-width: 768px) {
-    .photoblog-wrapper {
-        width: 100%;
+.photoblog-text-container {
+    box-sizing: border-box;
+    padding-bottom: 5px;
+    text-align: left;
+    word-break: break-word;
+}
+
+.photoblog-title {
+    margin-top: 0;
+    margin-bottom: 2px;
+    font-weight: bold;
+    background-color: var(--color-red) !important;
+    color: var(--color-blue) !important;
+    -webkit-text-fill-color: var(--color-blue) !important;
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 0px !important;
+}
+
+
+
+.photoblog-date {
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.photoblog-description {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+/* Photo Collection Carousel */
+.photoblog-collection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.photoblog-collection-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.photoblog-collection-title {
+    margin-top: 0;
+    margin-bottom: 2px;
+    font-weight: bold;
+    text-align: left;
+    background-color: var(--color-red) !important;
+    color: var(--color-blue) !important;
+    -webkit-text-fill-color: var(--color-blue) !important;
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 0px !important;
+}
+
+
+.photoblog-collection-name {
+    margin-top: 0;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.photoblog-collection-description {
+    margin-top: 0;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.photoblog-collection-carousel {
+    display: flex;
+    overflow-x: auto;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px 0;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+.photoblog-collection-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.photoblog-collection-photo {
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 15px;
+}
+
+.photoblog-collection-bar-wrapper {
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 15px;
+    height: 400px;
+}
+
+/* Pseudo element placeholder matching upper label space so blue bar aligns vertically with photo image */
+.photoblog-collection-bar-wrapper::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    padding-bottom: 5px;
+    height: 1.5em;
+    /* matches date label height */
+    flex-shrink: 0;
+    /* Prevents the spacer from shrinking */
+}
+
+.photoblog-collection-bar {
+    width: 5px;
+    /* Remove fixed height to allow flex growth */
+    height: auto;
+    background-color: var(--color-blue);
+    flex-shrink: 0;
+    flex-grow: 1;
+    /* This makes the bar expand to fill remaining vertical space */
+}
+
+.photoblog-collection-img {
+    height: 400px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .photoblog-collection-bar {
+        height: 280px;
     }
+
+    .photoblog-collection-img {
+        height: 280px;
+    }
+}
+
+
+.photoblog-collection-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px 0 20px;
+}
+
+.photoblog-collection-bottom .photoblog-text-container {
+    width: 100%;
+    max-width: 600px;
 }

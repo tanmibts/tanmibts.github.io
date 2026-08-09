@@ -8,9 +8,10 @@ export const PhotoBlogPage = () => {
             <Dots />
             <PhotoBlog />
             <Dots />
-            <div className="App-div">
+            <div className="App-div sticky-back-container">
                 <Link to="/" className="App-link">← back</Link>
             </div>
         </div>
+
     );
 };

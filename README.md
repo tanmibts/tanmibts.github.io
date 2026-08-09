@@ -68,7 +68,7 @@ corepack enable
 
 When you are happy with your local changes on `add-img-blob`:
 
-1. **Commit your changes:**
+1. **(Best practice) Commit your changes on any branch:**
    ```bash
    git add .
    git commit -m "Add image blob feature"
@@ -77,7 +77,7 @@ When you are happy with your local changes on `add-img-blob`:
 
 TODO victoria maybe need to update deploy branch?
 
-2. **Deploy to GitHub Pages (`gh-pages` branch):**
+2. **With your desired branch checked out on local, deploy to GitHub Pages (`gh-pages` branch):**
    ```bash
    yarn deploy
    # or: npm run deploy
@@ -134,4 +134,4 @@ The main page features draggable folder icons. To set a new default initial layo
 - 2026-07-27 project folder: new: MELT
 - 2026-07-27 project folder: update: bookshelf: add book photos
 - 2026-07-27 or style the main page to look like a messy desk. all the little things are stored in shells, like on my desk
-- 2026-07-28 change the icon to not be an egg
+- [x] 2026-07-28 change the icon to not be an egg

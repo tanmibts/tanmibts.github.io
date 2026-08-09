@@ -30,13 +30,13 @@
 /* Hover state: Lift, shadow & dashed selection outline */
 .draggable-folder:hover {
     z-index: 10;
-    border-color: #cfffcc;
+    border-color: var(--color-yellow);
     box-shadow: 4px 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .draggable-folder:hover .drag-grip-badge {
     opacity: 1;
-    background-color: #cfffcc;
+    background-color: var(--color-yellow);
     color: #000;
 }
 
@@ -44,16 +44,18 @@
 .draggable-folder.dragging {
     cursor: grabbing;
     z-index: 100;
-    border-color: #bad7fb;
+    border-color: var(--color-yellow);
     box-shadow: 8px 14px 28px rgba(0, 0, 0, 0.22);
     transition: none;
 }
 
 .draggable-folder.dragging .drag-grip-badge {
     opacity: 1;
-    background-color: #bad7fb;
+    background-color: var(--color-yellow);
     color: #000;
 }
+
+
 
 /* Drag Grip Badge */
 .drag-grip-badge {
